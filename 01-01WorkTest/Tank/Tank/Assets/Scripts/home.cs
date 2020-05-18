@@ -10,6 +10,8 @@ public class home : MonoBehaviour
 
     public GameObject explosionPrefab;
 
+    public AudioClip dieAudio;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +25,8 @@ public class home : MonoBehaviour
     }
     public void Die()
     {
-
+        AudioSource.PlayClipAtPoint(dieAudio,transform.position);
+        PlayManager.instance.isDefead = true;
         sr.sprite = BrokenSprite;
         Instantiate(explosionPrefab, transform.position, transform.rotation);
     }

@@ -67,6 +67,8 @@ public class enermy : MonoBehaviour
 
     }
 
+    //private float enermyCount = 3;
+
     private float rotateTimeDirection=4f;
     private float v;
     private float h;
@@ -137,15 +139,40 @@ public class enermy : MonoBehaviour
         }
     }
 
+    private void RotateDirection()
+    {
+        if (v==1)
+        {
+            v = 0;
+            h = 1;
+        }
+        if (v==-1)
+        {
+            v = 0;
+            h = -1;
+        }
+        if (h==1)
+        {
+            h = 0;
+            v = -1;
+        }
+        if (h==-1)
+        {
+            v = 1;
+            h = 0;
+        }
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "enermy")
         {
-            rotateTimeDirection = 1.5f;
+            RotateDirection();
+            //rotateTimeDirection = 1.5f;
         }
         if (collision.gameObject.tag == "barrier" || collision.gameObject.tag == "umi")
         {
-            rotateTimeDirection = 1.5f;
+            RotateDirection();//
+            //rotateTimeDirection = 1.5f;
         }
         if (collision.gameObject.tag == "Tank"|| collision.gameObject.tag == "heart")
         {
@@ -163,6 +190,8 @@ public class enermy : MonoBehaviour
     private void Die()
     {
         //产生爆炸特效 死亡 
+        //enermyCount--;
+        PlayManager.instance.playeSorce++;
         Instantiate(explosionObject, transform.position, transform.rotation);
         Destroy(gameObject);
     }

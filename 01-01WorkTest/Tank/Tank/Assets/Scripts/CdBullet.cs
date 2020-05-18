@@ -30,6 +30,7 @@ public class CdBullet : MonoBehaviour
                 {
                     //玩家爆炸 重生
                     collision.SendMessage("Die");
+
                     Destroy(gameObject);
                 }
                 

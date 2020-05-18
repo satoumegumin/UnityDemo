@@ -63,13 +63,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\CreateMap.cs" />
+    <Compile Include="Assets\options.cs" />
     <Compile Include="Assets\Scripts\Birth.cs" />
     <Compile Include="Assets\Scripts\CdBullet.cs" />
+    <Compile Include="Assets\Scripts\CreateMap.cs" />
     <Compile Include="Assets\Scripts\enermy.cs" />
     <Compile Include="Assets\Scripts\explosion.cs" />
     <Compile Include="Assets\Scripts\home.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\PlayManager.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Administrator/Desktop/UnityWork/01-01WorkTest/Tank/Tank/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

@@ -96,6 +96,7 @@ MonoBehaviour:
   BrokenSprite: {fileID: 21300012, guid: 529e000d42d32de49bc475716ba7ae37, type: 3}
   explosionPrefab: {fileID: 1251535858225681226, guid: 357c27759a8685143bed5e974da35c64,
     type: 3}
+  dieAudio: {fileID: 8300000, guid: 41660860d05dbdf49b3c8da6332a4ef9, type: 3}
 --- !u!61 &6691667763512151656
 BoxCollider2D:
   m_ObjectHideFlags: 0
